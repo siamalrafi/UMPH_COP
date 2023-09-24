@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Rahat Hasan Dipto\\Desktop\\New folder (3)\\university-management-auth-service\\logs\\winston\\errors\\.df99f097ad2cf7903b02c2b0db64bb71a517af92-audit.json",
+    "files": [
+        {
+            "date": 1695560908059,
+            "name": "C:\\Users\\Rahat Hasan Dipto\\Desktop\\New folder (3)\\university-management-auth-service\\logs\\winston\\errors\\phu-2023-24-09-19-error.log",
+            "hash": "2135d879d7654504f0b81aa3628b82551bb1022eb47e3f46f002b03efb152e92"
+        }
+    ],
+    "hashType": "sha256"
+}
