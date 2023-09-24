@@ -3,8 +3,8 @@ import { Schema, model } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
 import {
   academicSemesterCodes,
+  academicSemesterMonths,
   academicSemesterTitles,
-  acdemicSemesterMonths,
 } from './academicSemester.constant';
 import { IAcademicSemester } from './academicSemester.interface';
 
@@ -27,12 +27,12 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
     startMonth: {
       type: String,
       required: true,
-      enum: acdemicSemesterMonths,
+      enum: academicSemesterMonths,
     },
     endMonth: {
       type: String,
       required: true,
-      enum: acdemicSemesterMonths,
+      enum: academicSemesterMonths,
     },
   },
   {
