@@ -48,6 +48,7 @@ const getAllSemester = async (
   };
 };
 
+// export function
 export const AcademicSemesterService = {
   createSemester,
   getAllSemester,
