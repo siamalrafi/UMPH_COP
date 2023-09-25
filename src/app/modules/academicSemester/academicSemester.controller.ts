@@ -19,7 +19,7 @@ const createSemester = catchAsync(
       statusCode: httpStatus.OK,
       success: true,
       message: 'Academic semester created successfully!',
-      data: data,
+      data: result,
     });
     next();
   }

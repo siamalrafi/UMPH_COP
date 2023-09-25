@@ -93,7 +93,10 @@ const getAllSemester = async (
   if (sortBy && sortOrder) {
     sortCondition[sortBy] = sortOrder;
   }
-  const result = await AcademicSemester.find({ $and: andCondition })
+
+  const whereConditions = andCondition.length > 0 ? { $and: andCondition } : {};
+
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortCondition)
     .skip(skip)
     .limit(limit);
