@@ -113,8 +113,16 @@ const getAllSemester = async (
   };
 };
 
+const getSingleSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findById(id);
+  return result;
+};
+
 // export function
 export const AcademicSemesterService = {
   createSemester,
   getAllSemester,
+  getSingleSemester,
 };
