@@ -105,9 +105,9 @@ const deleteDepartment = async (
 };
 
 export const AcademicDepartmentService = {
+  createDepartment,
   getAllDepartments,
   getSingleDepartment,
   updateDepartment,
   deleteDepartment,
-  createDepartment,
 };
