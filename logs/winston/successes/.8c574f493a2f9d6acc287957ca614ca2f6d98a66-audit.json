@@ -74,6 +74,26 @@
             "date": 1695799915873,
             "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-27-09-13-success.log",
             "hash": "ee9b69219a5e9eba49907aece0fb82c09951125da373d821b513bfa4c5d3488a"
+        },
+        {
+            "date": 1696074625791,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-30-09-17-success.log",
+            "hash": "16dffb2221eb4e8d69d56ddf360834c694595536f2f2a3577d93f1e3be8564e6"
+        },
+        {
+            "date": 1696076062040,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-30-09-18-success.log",
+            "hash": "378e2e39b48be62dab4c5b437654ec7f2ee542645c38067a1b0d6d1dfad3237d"
+        },
+        {
+            "date": 1696079142832,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-30-09-19-success.log",
+            "hash": "9d943aa67bdf1d6c2023ed324169fc59d082246f254011a5e7d9f8dffcef4b89"
+        },
+        {
+            "date": 1696090463951,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-30-09-22-success.log",
+            "hash": "9ba7e20d8436308c2dcbf1623ef9c8da16027d9a74fca605a5173e1813ebec2f"
         }
     ],
     "hashType": "sha256"

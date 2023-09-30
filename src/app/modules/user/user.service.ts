@@ -25,9 +25,7 @@ const createStudent = async (
     student.academicSemester
   );
 
-  //  generate student id
   // generate student id
-
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
@@ -82,6 +80,7 @@ const createStudent = async (
 
   return newUserAllData;
 };
+
 export const UserService = {
   createStudent,
 };
