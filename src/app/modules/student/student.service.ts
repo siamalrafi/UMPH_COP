@@ -135,7 +135,6 @@ const deleteStudent = async (id: string): Promise<IStudent | null> => {
   return result;
 };
 
-// explore all students
 export const StudentService = {
   getAllStudents,
   getSingleStudent,
