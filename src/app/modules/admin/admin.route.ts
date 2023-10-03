@@ -1,28 +1,18 @@
 import express from 'express';
 import validateRequest from '../../middlewares/validateRequest';
-
+import { AdminController } from './admin.controller';
+import { AdminValidation } from './admin.validation';
 const router = express.Router();
-router.post(
-  '/create-management',
-  validateRequest(
-    ManagementDepartmentValidation.createManagementDepartmentZodSchema
-  ),
-  ManagementDepartmentController.createManagementDepartment
+
+router.get('/:id', AdminController.getSingleAdmin);
+router.get('/', AdminController.getAllAdmins);
+
+router.patch(
+  '/:id',
+  validateRequest(AdminValidation.updateAdmin),
+  AdminController.updateAdmin
 );
 
-// router.get('/', ManagementDepartmentController.getAllManagementDepartments);
+router.delete('/:id', AdminController.deleteAdmin);
 
-// router.get(
-//   '/:id',
-//   ManagementDepartmentController.getSinglelManagementDepartment
-// );
-
-// router.patch(
-//   '/:id',
-//   validateRequest(
-//     ManagementDepartmentValidation.updateManagementDepartmentZodSchema
-//   ),
-//   ManagementDepartmentController.updateManagementDepartment
-// );
-
-export const FacultyRoutes = router;
+export const AdminRoutes = router;
