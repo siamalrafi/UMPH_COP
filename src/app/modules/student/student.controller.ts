@@ -17,6 +17,7 @@ const getAllStudents = catchAsync(async (req: Request, res: Response) => {
     paginationOptions
   );
 
+  // send response
   sendResponse<IStudent[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
