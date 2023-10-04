@@ -5,7 +5,7 @@ import { Schema, model } from 'mongoose';
 import config from '../../../config';
 import { IUser, UserModel } from './user.interface';
 
-const userSchema = new Schema<IUser>(
+const UserSchema = new Schema<IUser, UserModel>(
   {
     id: {
       type: String,
@@ -19,7 +19,9 @@ const userSchema = new Schema<IUser>(
     password: {
       type: String,
       required: true,
+      select: 0,
     },
+    needPasswordChange: { type: Boolean, default: true },
     student: {
       type: Schema.Types.ObjectId,
       ref: 'Student',
@@ -41,8 +43,24 @@ const userSchema = new Schema<IUser>(
   }
 );
 
+UserSchema.statics.isUserExist = async function (
+  id: string
+): Promise<Pick<IUser, 'id' | 'password' | 'needPasswordChange'> | null> {
+  return await User.findOne(
+    { id },
+    { id: 1, password: 1, role: 1, needsPasswordChange: 1 }
+  );
+};
+
+UserSchema.statics.isPasswordMatch = async function (
+  givenPassword: string,
+  savedPassword: string
+) {
+  return await bcrypt.compare(givenPassword, savedPassword);
+};
+
 // user.create() | user.save()
-userSchema.pre('save', async function (next: NextFunction) {
+UserSchema.pre('save', async function (next: NextFunction) {
   const user = this;
 
   user.password = await bcrypt.hash(
@@ -53,4 +71,21 @@ userSchema.pre('save', async function (next: NextFunction) {
   next();
 });
 
-export const User = model<IUser, UserModel>('User', userSchema);
+export const User = model<IUser, UserModel>('User', UserSchema);
+
+// you can also do like this way to compare the password
+// userSchema.methods.isUserExist = async function (
+//   id: string
+// ): Promise<Partial<IUser> | null> {
+//   return await User.findOne(
+//     { id },
+//     { id: 1, password: 1, needPasswordChange: 1 }
+//   );
+// };
+
+// userSchema.methods.isPasswordMatch = async function (
+//   givenPassword: string,
+//   savedPassword: string
+// ) {
+//   return await bcrypt.compare(givenPassword, savedPassword);
+// };

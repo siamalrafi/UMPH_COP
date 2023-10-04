@@ -24,6 +24,11 @@
             "date": 1696392246237,
             "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-04-10-10-success.log",
             "hash": "1abc43ff168c32b557253ffa240e19d5aeb70166d76acad29bf330c9cb15f524"
+        },
+        {
+            "date": 1696395601684,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-04-10-11-success.log",
+            "hash": "6ed8c22083fb16b5703691b0245e7e5d31c87ef9e1cf6b8d3a326f5321407d1e"
         }
     ],
     "hashType": "sha256"
