@@ -43,9 +43,21 @@ const UserSchema = new Schema<IUser, UserModel>(
   }
 );
 
+// UserSchema.statics.isUserExist = async function (
+//   id: string
+// ): Promise<Pick<
+//   IUser,
+//   'id' | 'password' | 'role' | 'needPasswordChange'
+// > | null> {
+//   return await User.findOne(
+//     { id },
+//     { id: 1, password: 1, role: 1, needsPasswordChange: 1 }
+//   );
+// };
+
 UserSchema.statics.isUserExist = async function (
   id: string
-): Promise<Pick<IUser, 'id' | 'password' | 'needPasswordChange'> | null> {
+): Promise<IUser | null> {
   return await User.findOne(
     { id },
     { id: 1, password: 1, role: 1, needsPasswordChange: 1 }
