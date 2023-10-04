@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-this-alias */
 import * as bcrypt from 'bcrypt';
 import { NextFunction } from 'express';
 import { Schema, model } from 'mongoose';
@@ -42,10 +43,10 @@ const userSchema = new Schema<IUser>(
 
 // user.create() | user.save()
 userSchema.pre('save', async function (next: NextFunction) {
-  console.log(this);
+  const user = this;
 
-  this.password = await bcrypt.hash(
-    this.password,
+  user.password = await bcrypt.hash(
+    user.password,
     Number(config.bcrypt_salt_rounds)
   );
 
