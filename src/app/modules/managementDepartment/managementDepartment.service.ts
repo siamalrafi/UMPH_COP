@@ -6,7 +6,7 @@ import { managementDepartmentSearchableFields } from './managementDepartment.con
 import {
   IManagementDepartment,
   IManagementDepartmentFilters,
-} from './managementDepartment.inerface';
+} from './managementDepartment.interface';
 import { ManagementDepartment } from './managementDepartment.model';
 
 const createDepartment = async (
@@ -44,7 +44,7 @@ const getAllDepartments = async (
       })),
     });
   }
-  // Filters needs $and to fullfill all the conditions
+  // Filters needs $and to full-fill all the conditions
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
