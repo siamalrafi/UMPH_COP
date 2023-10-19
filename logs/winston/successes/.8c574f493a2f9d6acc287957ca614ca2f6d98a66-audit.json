@@ -6,9 +6,14 @@
     "auditLog": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\.8c574f493a2f9d6acc287957ca614ca2f6d98a66-audit.json",
     "files": [
         {
-            "date": 1697735788075,
+            "date": 1697738347036,
             "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-19-10-23-success.log",
-            "hash": "b3870a072d883386ac032d348c1f6d95730956ea435829e58df9c5bdd0f601b4"
+            "hash": "97544b9817c63af53f5b7088f0d0623baca896d67a7353697248044f070b7a5e"
+        },
+        {
+            "date": 1697738495841,
+            "name": "E:\\PARENT\\CLONE\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-20-10-00-success.log",
+            "hash": "210335801539c4fbfec0cbd3e1fbbcab4c1ce83f8b5fe347e6c3d8731959cad6"
         }
     ],
     "hashType": "sha256"
